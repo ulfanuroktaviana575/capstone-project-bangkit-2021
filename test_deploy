@@ -1,0 +1,8 @@
+import requests
+
+API_ENDPOINT = "https://predict-nxdb2yuj2q-an.a.run.app"
+IMAGE_PATH = "test/b.jpg"
+
+resp = requests.post(url = API_ENDPOINT, files={'file': open(IMAGE_PATH, 'rb')})
+
+print(resp.json())
